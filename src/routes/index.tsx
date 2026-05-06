@@ -104,6 +104,9 @@ function Index() {
                   width={1536}
                   height={1920}
                   className="h-full w-full object-cover"
+                  decoding="async"
+                  fetchpriority="high"
+                  loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-cream">
@@ -139,7 +142,7 @@ function Index() {
       </section>
 
       {/* TASTE THE LATEST ─────────────────────────────── */}
-      <section className="relative overflow-hidden bg-background py-24">
+      <section className="relative overflow-hidden bg-background py-24" style={{ contentVisibility: "auto", containIntrinsicSize: "0 800px" }}>
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
             <div className="animate-fade-up">
@@ -204,7 +207,7 @@ function Index() {
       </section>
 
       {/* FEATURED SCROLL ─────────────────────────────── */}
-      <section className="py-24 bg-background overflow-hidden">
+      <section className="py-24 bg-background overflow-hidden" style={{ contentVisibility: "auto", containIntrinsicSize: "0 600px" }}>
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12">
             <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-primary">— Featured Specialties</p>
@@ -260,7 +263,7 @@ function Index() {
       </section>
 
       {/* SHOWCASE ─────────────────────────────── */}
-      <section className="relative overflow-hidden bg-cream/50 py-32 grain">
+      <section className="relative overflow-hidden bg-cream/50 py-32 grain" style={{ contentVisibility: "auto", containIntrinsicSize: "0 900px" }}>
         <div className="relative mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:items-center">
           <div className="perspective order-2 lg:order-1">
             <div className="relative">
@@ -314,7 +317,7 @@ function Index() {
       </section>
 
       {/* CTA ─────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-32">
+      <section className="mx-auto max-w-7xl px-6 py-32" style={{ contentVisibility: "auto", containIntrinsicSize: "0 400px" }}>
         <div className="relative overflow-hidden rounded-sm bg-ink p-12 text-cream shadow-3d md:p-20">
           <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-primary/30 blur-3xl" />
           <div className="absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-primary-glow/20 blur-3xl" />

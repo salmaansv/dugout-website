@@ -18,7 +18,16 @@ export function Navbar() {
   };
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 12);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -27,9 +36,8 @@ export function Navbar() {
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "py-2" : "py-4"}`}>
       <div
-        className={`mx-auto flex items-center justify-between px-6 transition-all duration-500 ${
-          scrolled ? "max-w-6xl glass rounded-full shadow-soft" : "max-w-7xl"
-        }`}
+        className={`mx-auto flex items-center justify-between px-6 transition-all duration-500 ${scrolled ? "max-w-6xl glass rounded-full shadow-soft" : "max-w-7xl"
+          }`}
       >
         <Link to="/" onClick={scrollToTop} className="group flex items-center gap-4 py-2.5">
           <img

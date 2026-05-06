@@ -273,11 +273,11 @@
   /* Marquee */
   @keyframes marquee {
     from {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
 
     to {
-      transform: translateX(-50%);
+      transform: translate3d(-50%, 0, 0);
     }
   }
 
@@ -345,6 +345,7 @@
     position: absolute;
     inset: 0;
     background: var(--gradient-primary);
+    color: var(--cream);
     opacity: 0;
     transition: opacity 0.5s var(--transition-smooth);
   }
