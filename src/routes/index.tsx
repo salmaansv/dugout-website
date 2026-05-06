@@ -150,22 +150,7 @@ function Index() {
                 {latestProducts[activeIndex].desc}
               </p>
 
-              <div className="mt-12 flex items-center gap-4">
-                <button
-                  onClick={prevProduct}
-                  className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all hover:bg-primary hover:text-white active:scale-95 shadow-sm"
-                  aria-label="Previous product"
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                </button>
-                <button
-                  onClick={nextProduct}
-                  className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white transition-all hover:opacity-90 active:scale-95 shadow-sm"
-                  aria-label="Next product"
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                </button>
-              </div>
+
             </div>
 
             <div className="relative">
@@ -197,6 +182,23 @@ function Index() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-12 flex justify-center gap-4 animate-fade-up">
+            <button
+              onClick={prevProduct}
+              className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all hover:bg-primary hover:text-white active:scale-95 shadow-sm"
+              aria-label="Previous product"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </button>
+            <button
+              onClick={nextProduct}
+              className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white transition-all hover:opacity-90 active:scale-95 shadow-sm"
+              aria-label="Next product"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </button>
           </div>
         </div>
       </section>
